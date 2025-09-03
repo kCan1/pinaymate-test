@@ -54,15 +54,19 @@ function App() {
                 </span>
                 <div className="h-0.5 bg-gradient-to-r from-pink-400 to-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
-              
+
               {/* Live engagement metrics */}
               <div className="hidden md:flex items-center space-x-4 text-sm">
                 <div className="flex items-center space-x-2 bg-green-500/20 px-3 py-1 rounded-full border border-green-400/50">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
-                  <span className="text-green-300 font-bold">{onlineNow} beauties online</span>
+                  <span className="text-green-300 font-bold">
+                    {onlineNow} beauties online
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2 bg-pink-500/20 px-3 py-1 rounded-full border border-pink-400/50">
-                  <span className="text-pink-300 font-bold">💕 {newMatches} new matches today</span>
+                  <span className="text-pink-300 font-bold">
+                    💕 {newMatches} new matches today
+                  </span>
                 </div>
               </div>
             </div>
@@ -95,7 +99,9 @@ function App() {
                   alt="SheerID"
                   className="w-5 h-5 animate-pulse"
                 />
-                <span className="text-green-300 font-medium">100% Verified</span>
+                <span className="text-green-300 font-medium">
+                  100% Verified
+                </span>
               </div>
               <button className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-8 py-3 rounded-full hover:from-pink-400 hover:to-red-400 transition-all duration-300 font-black shadow-lg hover:shadow-pink-400/25 transform hover:scale-105 animate-pulse text-sm">
                 🔥 JOIN NOW - LIMITED
@@ -108,7 +114,7 @@ function App() {
       {/* Hero Section - OnlyFans-inspired engagement */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60 z-10"></div>
-        
+
         {/* Dynamic rotating backgrounds with attractive women */}
         <div className="absolute inset-0">
           {filipinaImages.map((image, index) => (
@@ -117,7 +123,9 @@ function App() {
                 src={image}
                 alt="Beautiful verified Filipina waiting to connect"
                 className={`w-full h-full object-cover transition-all duration-2000 ${
-                  index === currentImageIndex ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
+                  index === currentImageIndex
+                    ? "opacity-100 scale-105"
+                    : "opacity-0 scale-100"
                 }`}
               />
               {/* Subtle vignette effect */}
@@ -130,30 +138,36 @@ function App() {
         <div className="absolute top-20 left-4 z-30 space-y-3 hidden lg:block max-w-sm">
           <div className="bg-black/80 border border-pink-400/60 rounded-xl p-4 backdrop-blur-sm animate-slide-in shadow-xl">
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
                 alt="Maria online now"
                 className="w-12 h-12 rounded-full object-cover border-2 border-pink-400 shadow-lg"
               />
               <div className="flex-1">
                 <div className="text-white font-bold text-sm">Maria, 24</div>
-                <div className="text-pink-300 text-xs">💋 Online now • Manila</div>
-                <div className="text-green-300 text-xs">⚡ Looking for serious relationship</div>
+                <div className="text-pink-300 text-xs">
+                  💋 Online now • Manila
+                </div>
+                <div className="text-green-300 text-xs">
+                  ⚡ Looking for serious relationship
+                </div>
               </div>
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
             </div>
           </div>
-          
+
           <div className="bg-black/80 border border-purple-400/60 rounded-xl p-4 backdrop-blur-sm animate-slide-in delay-500 shadow-xl">
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
                 alt="Isabella just verified"
                 className="w-12 h-12 rounded-full object-cover border-2 border-purple-400 shadow-lg"
               />
               <div className="flex-1">
                 <div className="text-white font-bold text-sm">Isabella, 26</div>
-                <div className="text-purple-300 text-xs">✨ Just verified • Cebu</div>
+                <div className="text-purple-300 text-xs">
+                  ✨ Just verified • Cebu
+                </div>
                 <div className="text-yellow-300 text-xs">💎 Premium member</div>
               </div>
               <div className="text-xs text-purple-300 font-bold">NEW</div>
@@ -162,17 +176,21 @@ function App() {
 
           <div className="bg-black/80 border border-red-400/60 rounded-xl p-4 backdrop-blur-sm animate-slide-in delay-1000 shadow-xl">
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
                 alt="Sophia seeking connection"
                 className="w-12 h-12 rounded-full object-cover border-2 border-red-400 shadow-lg"
               />
               <div className="flex-1">
                 <div className="text-white font-bold text-sm">Sophia, 23</div>
-                <div className="text-red-300 text-xs">💕 Seeking love • Davao</div>
+                <div className="text-red-300 text-xs">
+                  💕 Seeking love • Davao
+                </div>
                 <div className="text-orange-300 text-xs">🔥 2 likes today</div>
               </div>
-              <div className="text-xs text-red-300 font-bold animate-pulse">HOT</div>
+              <div className="text-xs text-red-300 font-bold animate-pulse">
+                HOT
+              </div>
             </div>
           </div>
         </div>
@@ -181,26 +199,38 @@ function App() {
         <div className="absolute top-32 right-8 z-30 space-y-3 max-w-xs">
           <div className="bg-black/90 border border-green-400/60 rounded-lg px-4 py-3 text-sm backdrop-blur-sm animate-slide-in shadow-xl">
             <div className="flex items-center space-x-2">
-              <span className="text-green-400 text-lg">💕</span> 
-              <span className="text-white font-bold">Michael just connected with Sophia!</span>
+              <span className="text-green-400 text-lg">💕</span>
+              <span className="text-white font-bold">
+                Michael just connected with Sophia!
+              </span>
             </div>
-            <div className="text-green-300 text-xs mt-1">💸 Premium match confirmed</div>
+            <div className="text-green-300 text-xs mt-1">
+              💸 Premium match confirmed
+            </div>
           </div>
-          
+
           <div className="bg-black/90 border border-pink-400/60 rounded-lg px-4 py-3 text-sm backdrop-blur-sm animate-slide-in delay-1000 shadow-xl">
             <div className="flex items-center space-x-2">
-              <span className="text-pink-400 text-lg">⚡</span> 
-              <span className="text-white font-bold">3 new premium members joined</span>
+              <span className="text-pink-400 text-lg">⚡</span>
+              <span className="text-white font-bold">
+                3 new premium members joined
+              </span>
             </div>
-            <div className="text-pink-300 text-xs mt-1">🔥 Competition is heating up!</div>
+            <div className="text-pink-300 text-xs mt-1">
+              🔥 Competition is heating up!
+            </div>
           </div>
-          
+
           <div className="bg-black/90 border border-purple-400/60 rounded-lg px-4 py-3 text-sm backdrop-blur-sm animate-slide-in delay-2000 shadow-xl">
             <div className="flex items-center space-x-2">
-              <span className="text-purple-400 text-lg">💎</span> 
-              <span className="text-white font-bold">Limited spots filling fast!</span>
+              <span className="text-purple-400 text-lg">💎</span>
+              <span className="text-white font-bold">
+                Limited spots filling fast!
+              </span>
             </div>
-            <div className="text-purple-300 text-xs mt-1">⏰ Only {spotsLeft} elite spots left</div>
+            <div className="text-purple-300 text-xs mt-1">
+              ⏰ Only {spotsLeft} elite spots left
+            </div>
           </div>
         </div>
 
@@ -225,12 +255,18 @@ function App() {
           </h1>
 
           <p className="text-2xl md:text-4xl mb-6 text-white font-black animate-fade-in delay-300 drop-shadow-lg">
-            💕 {memberCount.toLocaleString()} Verified Beauties • {onlineNow} Online Now
+            💕 {memberCount.toLocaleString()} Verified Beauties • {onlineNow}{" "}
+            Online Now
           </p>
 
           <p className="text-xl mb-10 max-w-5xl mx-auto text-gray-100 animate-fade-in delay-500 leading-relaxed">
-            <span className="text-pink-300 font-black text-2xl">WARNING:</span> These gorgeous verified Filipinas receive 
-            <span className="text-yellow-300 font-bold"> 50+ messages daily</span>. 
+            <span className="text-pink-300 font-black text-2xl">WARNING:</span>{" "}
+            These gorgeous verified Filipinas receive
+            <span className="text-yellow-300 font-bold">
+              {" "}
+              50+ messages daily
+            </span>
+            .
             <span className="text-red-300 font-black animate-pulse block mt-3 text-xl">
               ⚡ Don't wait - someone else will claim your spot!
             </span>
@@ -241,10 +277,10 @@ function App() {
             <button className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 text-white px-20 py-6 rounded-full text-3xl font-black hover:from-red-400 hover:via-pink-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-110 shadow-2xl shadow-red-500/50 animate-bounce">
               💖 ACCESS {onlineNow} ONLINE BEAUTIES NOW
             </button>
-            
+
             <div className="text-center">
               <div className="text-yellow-300 font-bold text-lg animate-pulse">
-                ⏰ This offer expires in: 
+                ⏰ This offer expires in:
                 <span className="text-red-300 font-black"> 2:47:23</span>
               </div>
             </div>
@@ -256,24 +292,42 @@ function App() {
               <div className="text-4xl font-black text-pink-300 animate-pulse">
                 {memberCount.toLocaleString()}
               </div>
-              <div className="text-sm text-gray-200 font-bold">Verified Beauties</div>
-              <div className="text-pink-400 text-xs mt-1">💋 All real profiles</div>
+              <div className="text-sm text-gray-200 font-bold">
+                Verified Beauties
+              </div>
+              <div className="text-pink-400 text-xs mt-1">
+                💋 All real profiles
+              </div>
             </div>
-            
+
             <div className="transform hover:scale-110 transition-transform duration-300 bg-black/40 rounded-xl p-6 border border-green-400/50 backdrop-blur-sm">
-              <div className="text-4xl font-black text-green-300 animate-pulse">{onlineNow}</div>
-              <div className="text-sm text-gray-200 font-bold">Online Right Now</div>
-              <div className="text-green-400 text-xs mt-1">⚡ Ready to chat</div>
+              <div className="text-4xl font-black text-green-300 animate-pulse">
+                {onlineNow}
+              </div>
+              <div className="text-sm text-gray-200 font-bold">
+                Online Right Now
+              </div>
+              <div className="text-green-400 text-xs mt-1">
+                ⚡ Ready to chat
+              </div>
             </div>
-            
+
             <div className="transform hover:scale-110 transition-transform duration-300 bg-black/40 rounded-xl p-6 border border-yellow-400/50 backdrop-blur-sm">
-              <div className="text-4xl font-black text-yellow-300 animate-pulse">94%</div>
-              <div className="text-sm text-gray-200 font-bold">Success Rate</div>
-              <div className="text-yellow-400 text-xs mt-1">💕 Find love fast</div>
+              <div className="text-4xl font-black text-yellow-300 animate-pulse">
+                94%
+              </div>
+              <div className="text-sm text-gray-200 font-bold">
+                Success Rate
+              </div>
+              <div className="text-yellow-400 text-xs mt-1">
+                💕 Find love fast
+              </div>
             </div>
-            
+
             <div className="transform hover:scale-110 transition-transform duration-300 bg-black/40 rounded-xl p-6 border border-purple-400/50 backdrop-blur-sm">
-              <div className="text-4xl font-black text-purple-300 animate-pulse">{spotsLeft}</div>
+              <div className="text-4xl font-black text-purple-300 animate-pulse">
+                {spotsLeft}
+              </div>
               <div className="text-sm text-gray-200 font-bold">Spots Left</div>
               <div className="text-red-400 text-xs mt-1">🚨 Filling fast!</div>
             </div>
@@ -286,14 +340,19 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-7xl font-black text-white mb-8 font-serif">
-              🔥 <span className="text-transparent bg-gradient-to-r from-pink-300 to-red-300 bg-clip-text">HOT</span> Members Online Now
+              🔥{" "}
+              <span className="text-transparent bg-gradient-to-r from-pink-300 to-red-300 bg-clip-text">
+                HOT
+              </span>{" "}
+              Members Online Now
             </h2>
             <p className="text-2xl text-gray-200 mb-6">
               💋 These verified beauties are waiting for YOUR message
             </p>
             <div className="bg-red-600/30 border border-red-400/60 rounded-xl px-8 py-4 inline-block backdrop-blur-sm">
               <span className="text-red-200 font-black text-lg animate-pulse">
-                ⚠️ WARNING: {onlineNow} gorgeous women online - they won't wait long!
+                ⚠️ WARNING: {onlineNow} gorgeous women online - they won't wait
+                long!
               </span>
             </div>
           </div>
@@ -304,55 +363,62 @@ function App() {
                 name: "Sophia",
                 age: 25,
                 location: "Manila",
-                image: "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
                 status: "🔥 ONLINE NOW",
                 description: "Model & Entrepreneur",
                 interests: "Luxury travel, Fine dining",
                 messages: "47 msgs today",
-                lastSeen: "Active now"
+                lastSeen: "Active now",
               },
               {
                 name: "Isabella",
                 age: 27,
                 location: "Cebu",
-                image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
                 status: "💎 VIP Member",
-                description: "Doctor & Investor", 
+                description: "Doctor & Investor",
                 interests: "International culture, Fitness",
                 messages: "32 msgs today",
-                lastSeen: "2 min ago"
+                lastSeen: "2 min ago",
               },
               {
                 name: "Angelica",
                 age: 24,
                 location: "Davao",
-                image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
                 status: "⭐ NEW TODAY",
                 description: "Fashion Designer",
                 interests: "Art, Photography",
                 messages: "18 msgs today",
-                lastSeen: "Just now"
+                lastSeen: "Just now",
               },
               {
                 name: "Carmen",
                 age: 26,
                 location: "Iloilo",
-                image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
                 status: "💕 PREMIUM",
                 description: "Business Owner",
                 interests: "Travel, Romance",
                 messages: "23 msgs today",
-                lastSeen: "Online"
-              }
+                lastSeen: "Online",
+              },
             ].map((member, index) => (
-              <div key={index} className="group relative bg-black/70 rounded-3xl overflow-hidden border border-pink-400/40 hover:border-pink-300/80 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/30">
+              <div
+                key={index}
+                className="group relative bg-black/70 rounded-3xl overflow-hidden border border-pink-400/40 hover:border-pink-300/80 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/30"
+              >
                 <div className="relative">
-                  <img 
-                    src={member.image} 
+                  <img
+                    src={member.image}
                     alt={`${member.name}, ${member.age}, ${member.location} - Available now`}
                     className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  
+
                   {/* Live status overlay */}
                   <div className="absolute top-4 left-4 flex space-x-2">
                     <div className="bg-green-500 px-3 py-1 rounded-full text-xs text-white font-bold animate-pulse">
@@ -362,7 +428,7 @@ function App() {
                       {member.status}
                     </div>
                   </div>
-                  
+
                   {/* Message count (OnlyFans-style engagement) */}
                   <div className="absolute top-4 right-4 bg-black/80 px-3 py-1 rounded-full text-xs text-yellow-300 font-bold">
                     💬 {member.messages}
@@ -370,26 +436,39 @@ function App() {
 
                   {/* Gradient overlay with info */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-6">
-                    <h3 className="text-2xl font-black text-white mb-1">{member.name}, {member.age}</h3>
-                    <p className="text-pink-300 text-sm mb-2 font-bold">📍 {member.location}</p>
-                    <p className="text-gray-200 text-sm mb-2 font-semibold">{member.description}</p>
-                    <p className="text-gray-300 text-xs mb-3">{member.interests}</p>
-                    
+                    <h3 className="text-2xl font-black text-white mb-1">
+                      {member.name}, {member.age}
+                    </h3>
+                    <p className="text-pink-300 text-sm mb-2 font-bold">
+                      📍 {member.location}
+                    </p>
+                    <p className="text-gray-200 text-sm mb-2 font-semibold">
+                      {member.description}
+                    </p>
+                    <p className="text-gray-300 text-xs mb-3">
+                      {member.interests}
+                    </p>
+
                     {/* Engagement metrics */}
                     <div className="flex justify-between items-center text-xs">
-                      <span className="text-green-300 font-bold">⚡ Very responsive</span>
-                      <span className="text-yellow-300 font-bold">💎 Premium verified</span>
+                      <span className="text-green-300 font-bold">
+                        ⚡ Very responsive
+                      </span>
+                      <span className="text-yellow-300 font-bold">
+                        💎 Premium verified
+                      </span>
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Action button */}
                 <div className="p-4 bg-gradient-to-r from-pink-900/60 to-purple-900/60">
                   <button className="w-full bg-gradient-to-r from-pink-500 to-red-500 text-white py-3 rounded-full font-black hover:from-pink-400 hover:to-red-400 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm">
                     💕 SEND PRIVATE MESSAGE
                   </button>
                   <div className="text-center mt-2 text-xs text-gray-300">
-                    ⚠️ {Math.floor(Math.random() * 20) + 10} men viewed her profile today
+                    ⚠️ {Math.floor(Math.random() * 20) + 10} men viewed her
+                    profile today
                   </div>
                 </div>
               </div>
@@ -407,7 +486,7 @@ function App() {
               </span>
             </div>
             <button className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-16 py-6 rounded-full text-2xl font-black hover:from-red-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-red-500/50 animate-pulse">
-              🔥 CLAIM YOUR SPOT NOW - ${spotsLeft < 20 ? '199' : '99'}/MONTH
+              🔥 CLAIM YOUR SPOT NOW - ${spotsLeft < 20 ? "199" : "99"}/MONTH
             </button>
           </div>
         </div>
@@ -418,10 +497,14 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-serif">
-              <span className="text-transparent bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text">SheerID</span> Verified Beauties
+              <span className="text-transparent bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text">
+                SheerID
+              </span>{" "}
+              Verified Beauties
             </h2>
             <p className="text-xl text-gray-200 mb-4">
-              🔒 Every Filipina is verified authentic - No fake profiles, No disappointments
+              🔒 Every Filipina is verified authentic - No fake profiles, No
+              disappointments
             </p>
             <div className="text-green-300 font-semibold animate-pulse text-lg">
               💕 {verifiedToday} gorgeous women verified today
@@ -438,14 +521,18 @@ function App() {
               <h3 className="text-xl font-bold text-white mb-4">
                 Income Verified
               </h3>
-              <p className="text-gray-200 mb-4">$100K+ verified through SheerID</p>
+              <p className="text-gray-200 mb-4">
+                $100K+ verified through SheerID
+              </p>
               <div className="flex items-center justify-center space-x-2">
                 <img
                   src="https://via.placeholder.com/80x20/32CD32/FFFFFF?text=SheerID"
                   alt="SheerID verification badge"
                   className="h-5"
                 />
-                <span className="text-green-300 text-sm font-medium">✓ Authenticated</span>
+                <span className="text-green-300 text-sm font-medium">
+                  ✓ Authenticated
+                </span>
               </div>
             </div>
 
@@ -458,14 +545,18 @@ function App() {
               <h3 className="text-xl font-bold text-white mb-4">
                 Employment Confirmed
               </h3>
-              <p className="text-gray-200 mb-4">Professional status verification</p>
+              <p className="text-gray-200 mb-4">
+                Professional status verification
+              </p>
               <div className="flex items-center justify-center space-x-2">
                 <img
                   src="https://via.placeholder.com/80x20/1E90FF/FFFFFF?text=SheerID"
                   alt="SheerID verification badge"
                   className="h-5"
                 />
-                <span className="text-blue-300 text-sm font-medium">✓ Verified</span>
+                <span className="text-blue-300 text-sm font-medium">
+                  ✓ Verified
+                </span>
               </div>
             </div>
 
@@ -478,14 +569,18 @@ function App() {
               <h3 className="text-xl font-bold text-white mb-4">
                 Identity Authenticated
               </h3>
-              <p className="text-gray-200 mb-4">Government ID + biometric check</p>
+              <p className="text-gray-200 mb-4">
+                Government ID + biometric check
+              </p>
               <div className="flex items-center justify-center space-x-2">
                 <img
                   src="https://via.placeholder.com/80x20/8B4513/FFFFFF?text=SheerID"
                   alt="SheerID verification badge"
                   className="h-5"
                 />
-                <span className="text-purple-300 text-sm font-medium">✓ Secured</span>
+                <span className="text-purple-300 text-sm font-medium">
+                  ✓ Secured
+                </span>
               </div>
             </div>
 
@@ -505,7 +600,9 @@ function App() {
                   alt="SheerID verification badge"
                   className="h-5"
                 />
-                <span className="text-orange-300 text-sm font-medium">✓ Clear</span>
+                <span className="text-orange-300 text-sm font-medium">
+                  ✓ Clear
+                </span>
               </div>
             </div>
           </div>
@@ -541,20 +638,28 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-gradient-to-br from-yellow-900/30 to-black/50 p-6 rounded-2xl border border-yellow-500/30 text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">1,247</div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">
+                1,247
+              </div>
               <div className="text-white font-semibold mb-1">USA Members</div>
-              <div className="text-gray-400 text-sm">🇺🇸 All 50 states covered</div>
+              <div className="text-gray-400 text-sm">
+                🇺🇸 All 50 states covered
+              </div>
             </div>
 
             <div className="bg-gradient-to-br from-red-900/30 to-black/50 p-6 rounded-2xl border border-red-500/30 text-center">
               <div className="text-3xl font-bold text-red-400 mb-2">334</div>
-              <div className="text-white font-semibold mb-1">Canada Members</div>
+              <div className="text-white font-semibold mb-1">
+                Canada Members
+              </div>
               <div className="text-gray-400 text-sm">🇨🇦 Coast to coast</div>
             </div>
 
             <div className="bg-gradient-to-br from-green-900/30 to-black/50 p-6 rounded-2xl border border-green-500/30 text-center">
               <div className="text-3xl font-bold text-green-400 mb-2">198</div>
-              <div className="text-white font-semibold mb-1">Australia Members</div>
+              <div className="text-white font-semibold mb-1">
+                Australia Members
+              </div>
               <div className="text-gray-400 text-sm">🇦🇺 Major cities</div>
             </div>
           </div>
@@ -592,12 +697,14 @@ function App() {
       </section>
 
       {/* Club Membership Tiers */}
-      <section id="club" className="py-20 bg-gradient-to-r from-yellow-900/20 to-black">
+      <section
+        id="club"
+        className="py-20 bg-gradient-to-r from-yellow-900/20 to-black"
+      >
         {/* ...existing code... */}
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16 font-serif">
-            Elite Club{" "}
-            <span className="text-yellow-400">Membership</span> Tiers
+            Elite Club <span className="text-yellow-400">Membership</span> Tiers
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
@@ -610,8 +717,12 @@ function App() {
               <div className="space-y-6">
                 <div className="bg-black/30 p-4 rounded-lg border border-yellow-500/20">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-yellow-400 font-semibold">🥉 Bronze Level</span>
-                    <span className="text-white text-2xl font-bold">$50/mo</span>
+                    <span className="text-yellow-400 font-semibold">
+                      🥉 Bronze Level
+                    </span>
+                    <span className="text-white text-2xl font-bold">
+                      $50/mo
+                    </span>
                   </div>
                   <ul className="text-gray-300 text-sm space-y-1">
                     <li>• Verified profile access</li>
@@ -622,8 +733,12 @@ function App() {
 
                 <div className="bg-black/30 p-4 rounded-lg border border-yellow-500/40">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-yellow-400 font-semibold">🥇 Gold Level</span>
-                    <span className="text-white text-2xl font-bold">$99/mo</span>
+                    <span className="text-yellow-400 font-semibold">
+                      🥇 Gold Level
+                    </span>
+                    <span className="text-white text-2xl font-bold">
+                      $99/mo
+                    </span>
                   </div>
                   <ul className="text-gray-300 text-sm space-y-1">
                     <li>• Priority matching + concierge</li>
@@ -634,8 +749,12 @@ function App() {
 
                 <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 p-4 rounded-lg border border-purple-500/50">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-purple-400 font-semibold">💎 Diamond Level</span>
-                    <span className="text-white text-2xl font-bold">$199/mo</span>
+                    <span className="text-purple-400 font-semibold">
+                      💎 Diamond Level
+                    </span>
+                    <span className="text-white text-2xl font-bold">
+                      $199/mo
+                    </span>
                   </div>
                   <ul className="text-gray-300 text-sm space-y-1">
                     <li>• Personal relationship advisor</li>
@@ -655,8 +774,12 @@ function App() {
               <div className="space-y-6">
                 <div className="bg-gradient-to-r from-pink-900/50 to-purple-900/50 p-4 rounded-lg border border-pink-500/50">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-pink-400 font-semibold">⭐ Star Status</span>
-                    <span className="text-green-400 text-2xl font-bold">FREE</span>
+                    <span className="text-pink-400 font-semibold">
+                      ⭐ Star Status
+                    </span>
+                    <span className="text-green-400 text-2xl font-bold">
+                      FREE
+                    </span>
                   </div>
                   <ul className="text-gray-300 text-sm space-y-1">
                     <li>• 7+ rating - Full access</li>
@@ -667,8 +790,12 @@ function App() {
 
                 <div className="bg-black/30 p-4 rounded-lg border border-yellow-500/30">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-yellow-400 font-semibold">🌟 Rising Star</span>
-                    <span className="text-white text-2xl font-bold">$25/mo</span>
+                    <span className="text-yellow-400 font-semibold">
+                      🌟 Rising Star
+                    </span>
+                    <span className="text-white text-2xl font-bold">
+                      $25/mo
+                    </span>
                   </div>
                   <ul className="text-gray-300 text-sm space-y-1">
                     <li>• 6+ rating - Partial access</li>
@@ -679,8 +806,12 @@ function App() {
 
                 <div className="bg-black/30 p-4 rounded-lg border border-blue-500/30">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-blue-400 font-semibold">👑 VIP Ambassador</span>
-                    <span className="text-yellow-400 text-xl font-bold">Earn Rewards</span>
+                    <span className="text-blue-400 font-semibold">
+                      👑 VIP Ambassador
+                    </span>
+                    <span className="text-yellow-400 text-xl font-bold">
+                      Earn Rewards
+                    </span>
                   </div>
                   <ul className="text-gray-300 text-sm space-y-1">
                     <li>• Referral rewards program</li>
@@ -699,10 +830,14 @@ function App() {
         {/* ...existing code... */}
         <div className="container mx-auto px-6">
           <h2 className="text-5xl md:text-7xl font-black text-center text-white mb-16 font-serif">
-            💕 They Found Their <span className="text-transparent bg-gradient-to-r from-pink-300 to-yellow-300 bg-clip-text">SOULMATE</span>
+            💕 They Found Their{" "}
+            <span className="text-transparent bg-gradient-to-r from-pink-300 to-yellow-300 bg-clip-text">
+              SOULMATE
+            </span>
           </h2>
           <p className="text-center text-2xl text-gray-200 mb-12">
-            🔥 Real success stories from men who took action (and you should too!)
+            🔥 Real success stories from men who took action (and you should
+            too!)
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -710,35 +845,44 @@ function App() {
               {
                 name: "Michael & Sophia",
                 route: "Manila → Chicago",
-                image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-                story: "Found my DREAM WOMAN in 3 days! Sophia is stunning, intelligent, and loving. Every penny was worth it. Don't wait like I almost did!",
+                image:
+                  "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                story:
+                  "Found my DREAM WOMAN in 3 days! Sophia is stunning, intelligent, and loving. Every penny was worth it. Don't wait like I almost did!",
                 timeline: "💕 Matched in 3 days • Engaged in 6 months",
                 verification: "✅ Verified Elite Success #1,247",
                 badge: "💎 Diamond Success",
-                investment: "Investment: $599 • Value: PRICELESS"
+                investment: "Investment: $599 • Value: PRICELESS",
               },
               {
                 name: "David & Maria",
-                route: "Cebu → Texas", 
-                image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-                story: "LIFE CHANGING! Maria is not just gorgeous but brilliant and caring. Best decision I EVER made. My only regret? Not joining sooner!",
+                route: "Cebu → Texas",
+                image:
+                  "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                story:
+                  "LIFE CHANGING! Maria is not just gorgeous but brilliant and caring. Best decision I EVER made. My only regret? Not joining sooner!",
                 timeline: "💖 Connected in 1 week • Living together now",
-                verification: "✅ Verified Elite Success #1,156", 
+                verification: "✅ Verified Elite Success #1,156",
                 badge: "🔥 Hot Success",
-                investment: "Investment: $299 • Result: MARRIED!"
+                investment: "Investment: $299 • Result: MARRIED!",
               },
               {
                 name: "James & Isabella",
                 route: "Quezon City → California",
-                image: "https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-                story: "INSTANT CONNECTION! Isabella exceeded every expectation. Beautiful, successful, perfect match. Already planning our wedding - THANK YOU PinayMate!",
+                image:
+                  "https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                story:
+                  "INSTANT CONNECTION! Isabella exceeded every expectation. Beautiful, successful, perfect match. Already planning our wedding - THANK YOU PinayMate!",
                 timeline: "⚡ Love at first chat • Married in 8 months",
                 verification: "✅ Verified Elite Success #987",
                 badge: "👑 Royal Romance",
-                investment: "Investment: $199 • Outcome: JACKPOT!"
-              }
+                investment: "Investment: $199 • Outcome: JACKPOT!",
+              },
             ].map((story, index) => (
-              <div key={index} className="bg-gradient-to-br from-pink-900/40 to-black/70 p-8 rounded-3xl border border-pink-400/40 hover:border-pink-300/80 transition-all duration-300 transform hover:scale-105 shadow-xl">
+              <div
+                key={index}
+                className="bg-gradient-to-br from-pink-900/40 to-black/70 p-8 rounded-3xl border border-pink-400/40 hover:border-pink-300/80 transition-all duration-300 transform hover:scale-105 shadow-xl"
+              >
                 <div className="relative mb-6">
                   <img
                     src={story.image}
@@ -750,14 +894,24 @@ function App() {
                   </div>
                 </div>
 
-                <h4 className="text-2xl font-black text-white mb-2">{story.name}</h4>
-                <div className="text-pink-300 text-sm mb-3 font-bold">{story.route}</div>
-                
-                <p className="text-gray-200 text-sm mb-6 italic font-bold leading-relaxed">"{story.story}"</p>
-                
+                <h4 className="text-2xl font-black text-white mb-2">
+                  {story.name}
+                </h4>
+                <div className="text-pink-300 text-sm mb-3 font-bold">
+                  {story.route}
+                </div>
+
+                <p className="text-gray-200 text-sm mb-6 italic font-bold leading-relaxed">
+                  "{story.story}"
+                </p>
+
                 <div className="space-y-2 text-sm">
-                  <div className="text-green-300 font-bold">{story.timeline}</div>
-                  <div className="text-purple-300 font-semibold">{story.verification}</div>
+                  <div className="text-green-300 font-bold">
+                    {story.timeline}
+                  </div>
+                  <div className="text-purple-300 font-semibold">
+                    {story.verification}
+                  </div>
                   <div className="text-yellow-300 font-bold text-xs bg-yellow-500/20 px-3 py-1 rounded-full inline-block">
                     {story.investment}
                   </div>
@@ -785,17 +939,15 @@ function App() {
         <div className="container mx-auto px-6 max-w-3xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-serif">
-              Apply for{" "}
-              <span className="text-yellow-400">Elite</span> Club Admission
+              Apply for <span className="text-yellow-400">Elite</span> Club
+              Admission
             </h2>
             <p className="text-xl text-gray-300 mb-4">
               Join the most exclusive Filipino-International network
             </p>
             <div className="flex justify-center space-x-8 text-sm">
               <div className="text-green-400">127 applications this week</div>
-              <div className="text-yellow-400">
-                {spotsLeft} spots remaining
-              </div>
+              <div className="text-yellow-400">{spotsLeft} spots remaining</div>
             </div>
           </div>
 
@@ -913,10 +1065,7 @@ function App() {
                   className="hidden"
                   id="document-upload"
                 />
-                <label
-                  htmlFor="document-upload"
-                  className="cursor-pointer"
-                >
+                <label htmlFor="document-upload" className="cursor-pointer">
                   <div className="text-4xl mb-4">📄</div>
                   <div className="text-white font-semibold mb-2">
                     Upload Documents
@@ -964,7 +1113,9 @@ function App() {
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-4">Network Expansion</h4>
+              <h4 className="text-white font-semibold mb-4">
+                Network Expansion
+              </h4>
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li className="flex items-center space-x-2">
                   <span className="text-green-400">●</span>
@@ -985,34 +1136,22 @@ function App() {
               <h4 className="text-white font-semibold mb-4">Elite Program</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition"
-                  >
+                  <a href="#" className="hover:text-yellow-400 transition">
                     Referral Rewards
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition"
-                  >
+                  <a href="#" className="hover:text-yellow-400 transition">
                     Ambassador Program
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition"
-                  >
+                  <a href="#" className="hover:text-yellow-400 transition">
                     VIP Events
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition"
-                  >
+                  <a href="#" className="hover:text-yellow-400 transition">
                     Success Stories
                   </a>
                 </li>
@@ -1023,34 +1162,22 @@ function App() {
               <h4 className="text-white font-semibold mb-4">Connect With Us</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition"
-                  >
+                  <a href="#" className="hover:text-yellow-400 transition">
                     Instagram Stories
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition"
-                  >
+                  <a href="#" className="hover:text-yellow-400 transition">
                     TikTok Content
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition"
-                  >
+                  <a href="#" className="hover:text-yellow-400 transition">
                     Elite Support
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-400 transition"
-                  >
+                  <a href="#" className="hover:text-yellow-400 transition">
                     Press & Media
                   </a>
                 </li>

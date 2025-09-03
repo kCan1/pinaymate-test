@@ -26,6 +26,7 @@ function App() {
       }
       if (Math.random() > 0.8) {
         setNewMatches((prev) => prev + 1);
+        setVerifiedToday((prev) => prev + 1);
       }
       if (Math.random() > 0.9 && spotsLeft > 0) {
         setSpotsLeft((prev) => prev - 1);

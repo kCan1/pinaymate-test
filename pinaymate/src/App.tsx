@@ -516,7 +516,7 @@ function App() {
       </section>
 
       {/* Enhanced SheerID Verification with Desire Elements */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-gray-900 to-black">
+      <section id="verification" className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-gray-900 to-black">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 font-serif">
@@ -634,6 +634,325 @@ function App() {
             <button className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-3 sm:px-10 sm:py-4 md:px-12 rounded-full text-lg sm:text-xl font-bold hover:from-red-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-red-500/25 animate-pulse w-full sm:w-auto">
               🔥 Access Verified Filipinas Now
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Network Map - Philippines to World */}
+      <section id="network" className="py-20 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img
+            src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="World map"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="relative z-10 container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-serif">
+              Connect Philippines to the{" "}
+              <span className="text-yellow-400">World</span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Building bridges from the Philippines to 25 countries worldwide
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gradient-to-br from-yellow-900/30 to-black/50 p-6 rounded-2xl border border-yellow-500/30 text-center">
+              <div className="text-3xl font-bold text-yellow-400 mb-2">
+                1,247
+              </div>
+              <div className="text-white font-semibold mb-1">USA Members</div>
+              <div className="text-gray-400 text-sm">
+                🇺🇸 All 50 states covered
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-red-900/30 to-black/50 p-6 rounded-2xl border border-red-500/30 text-center">
+              <div className="text-3xl font-bold text-red-400 mb-2">334</div>
+              <div className="text-white font-semibold mb-1">
+                Canada Members
+              </div>
+              <div className="text-gray-400 text-sm">🇨🇦 Coast to coast</div>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-900/30 to-black/50 p-6 rounded-2xl border border-green-500/30 text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">198</div>
+              <div className="text-white font-semibold mb-1">
+                Australia Members
+              </div>
+              <div className="text-gray-400 text-sm">🇦🇺 Major cities</div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="bg-black/50 rounded-2xl p-8 border border-yellow-500/30 inline-block">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Network Expansion Roadmap
+              </h3>
+              <div className="space-y-3 text-left">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-gray-300">
+                    PinayMate - Philippines (Live)
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
+                  <span className="text-gray-300">
+                    Expanding to 50 US States
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span className="text-gray-300">ThaiMate - Coming 2025</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                  <span className="text-gray-300">VietMate - Coming 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Club Membership Tiers */}
+      <section id="club" className="py-20 bg-gradient-to-r from-yellow-900/20 to-black">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16 font-serif">
+            Elite Club <span className="text-yellow-400">Membership</span> Tiers
+          </h2>
+
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+            {/* Men's Elite Club */}
+            <div className="bg-gradient-to-br from-blue-900/50 to-black/50 p-8 rounded-2xl border border-blue-500/30">
+              <h3 className="text-3xl font-bold text-white mb-6 text-center font-serif">
+                Men's Elite Club
+              </h3>
+
+              <div className="space-y-6">
+                <div className="bg-black/30 p-4 rounded-lg border border-yellow-500/20">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-yellow-400 font-semibold">
+                      🥉 Bronze Level
+                    </span>
+                    <span className="text-white text-2xl font-bold">
+                      $50/mo
+                    </span>
+                  </div>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• Verified profile access</li>
+                    <li>• Basic matching algorithm</li>
+                    <li>• Standard customer support</li>
+                  </ul>
+                </div>
+
+                <div className="bg-black/30 p-4 rounded-lg border border-yellow-500/40">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-yellow-400 font-semibold">
+                      🥇 Gold Level
+                    </span>
+                    <span className="text-white text-2xl font-bold">
+                      $99/mo
+                    </span>
+                  </div>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• Priority matching + concierge</li>
+                    <li>• Advanced search filters</li>
+                    <li>• Monthly virtual events</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 p-4 rounded-lg border border-purple-500/50">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-purple-400 font-semibold">
+                      💎 Diamond Level
+                    </span>
+                    <span className="text-white text-2xl font-bold">
+                      $199/mo
+                    </span>
+                  </div>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• Personal relationship advisor</li>
+                    <li>• Exclusive events + travel assistance</li>
+                    <li>• VIP concierge service</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Filipina Network */}
+            <div className="bg-gradient-to-br from-pink-900/50 to-black/50 p-8 rounded-2xl border border-pink-500/30">
+              <h3 className="text-3xl font-bold text-white mb-6 text-center font-serif">
+                Filipina Network
+              </h3>
+
+              <div className="space-y-6">
+                <div className="bg-gradient-to-r from-pink-900/50 to-purple-900/50 p-4 rounded-lg border border-pink-500/50">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-pink-400 font-semibold">
+                      ⭐ Star Status
+                    </span>
+                    <span className="text-green-400 text-2xl font-bold">
+                      FREE
+                    </span>
+                  </div>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• 7+ rating - Full access</li>
+                    <li>• Premium profile visibility</li>
+                    <li>• VIP event invitations</li>
+                  </ul>
+                </div>
+
+                <div className="bg-black/30 p-4 rounded-lg border border-yellow-500/30">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-yellow-400 font-semibold">
+                      🌟 Rising Star
+                    </span>
+                    <span className="text-white text-2xl font-bold">
+                      $25/mo
+                    </span>
+                  </div>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• 6+ rating - Partial access</li>
+                    <li>• Standard profile features</li>
+                    <li>• Community events</li>
+                  </ul>
+                </div>
+
+                <div className="bg-black/30 p-4 rounded-lg border border-blue-500/30">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-blue-400 font-semibold">
+                      👑 VIP Ambassador
+                    </span>
+                    <span className="text-yellow-400 text-xl font-bold">
+                      Earn Rewards
+                    </span>
+                  </div>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• Referral rewards program</li>
+                    <li>• Exclusive ambassador benefits</li>
+                    <li>• Monthly bonus opportunities</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <button className="bg-gradient-to-r from-yellow-500 to-orange-600 text-black px-12 py-4 rounded-full text-xl font-bold hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-yellow-500/25 animate-pulse">
+              🔥 Join Elite Club Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories - Club Member Spotlights */}
+      <section className="py-20 bg-gradient-to-r from-black to-gray-900">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h2 className="text-5xl md:text-7xl font-black text-center text-white mb-16 font-serif">
+            💕 They Found Their{" "}
+            <span className="text-transparent bg-gradient-to-r from-pink-300 to-yellow-300 bg-clip-text">
+              SOULMATE
+            </span>
+          </h2>
+          <p className="text-center text-2xl text-gray-200 mb-12">
+            🔥 Real success stories from men who took action (and you should
+            too!)
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                name: "Michael & Sophia",
+                route: "Manila → Chicago",
+                image:
+                  "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                story:
+                  "Found my DREAM WOMAN in 3 days! Sophia is stunning, intelligent, and loving. Every penny was worth it. Don't wait like I almost did!",
+                timeline: "💕 Matched in 3 days • Engaged in 6 months",
+                verification: "✅ Verified Elite Success #1,247",
+                badge: "💎 Diamond Success",
+                investment: "Investment: $599 • Value: PRICELESS",
+              },
+              {
+                name: "David & Maria",
+                route: "Cebu → Texas",
+                image:
+                  "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                story:
+                  "LIFE CHANGING! Maria is not just gorgeous but brilliant and caring. Best decision I EVER made. My only regret? Not joining sooner!",
+                timeline: "💖 Connected in 1 week • Living together now",
+                verification: "✅ Verified Elite Success #1,156",
+                badge: "🔥 Hot Success",
+                investment: "Investment: $299 • Result: MARRIED!",
+              },
+              {
+                name: "James & Isabella",
+                route: "Quezon City → California",
+                image:
+                  "https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                story:
+                  "INSTANT CONNECTION! Isabella exceeded every expectation. Beautiful, successful, perfect match. Already planning our wedding - THANK YOU PinayMate!",
+                timeline: "⚡ Love at first chat • Married in 8 months",
+                verification: "✅ Verified Elite Success #987",
+                badge: "👑 Royal Romance",
+                investment: "Investment: $199 • Outcome: JACKPOT!",
+              },
+            ].map((story, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-pink-900/40 to-black/70 p-8 rounded-3xl border border-pink-400/40 hover:border-pink-300/80 transition-all duration-300 transform hover:scale-105 shadow-xl"
+              >
+                <div className="relative mb-6">
+                  <img
+                    src={story.image}
+                    alt={`Success story: ${story.name}`}
+                    className="w-full h-64 rounded-2xl object-cover shadow-lg"
+                  />
+                  <div className="absolute top-4 right-4 bg-black/90 px-4 py-2 rounded-full text-sm text-pink-300 font-black">
+                    {story.badge}
+                  </div>
+                </div>
+
+                <h4 className="text-2xl font-black text-white mb-2">
+                  {story.name}
+                </h4>
+                <div className="text-pink-300 text-sm mb-3 font-bold">
+                  {story.route}
+                </div>
+
+                <p className="text-gray-200 text-sm mb-6 italic font-bold leading-relaxed">
+                  "{story.story}"
+                </p>
+
+                <div className="space-y-2 text-sm">
+                  <div className="text-green-300 font-bold">
+                    {story.timeline}
+                  </div>
+                  <div className="text-purple-300 font-semibold">
+                    {story.verification}
+                  </div>
+                  <div className="text-yellow-300 font-bold text-xs bg-yellow-500/20 px-3 py-1 rounded-full inline-block">
+                    {story.investment}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-pink-600/30 to-red-600/30 border border-pink-400/60 rounded-2xl px-10 py-6 inline-block backdrop-blur-sm">
+              <span className="text-pink-200 font-black text-xl block mb-2">
+                💕 500+ Success Stories • 94% Find Love in 30 Days
+              </span>
+              <span className="text-yellow-300 font-bold text-lg">
+                Your perfect Filipina might be taken while you hesitate!
+              </span>
+            </div>
           </div>
         </div>
       </section>

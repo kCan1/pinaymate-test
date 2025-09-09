@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -88,10 +87,6 @@ const Header: React.FC = () => {
 
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
-            <button className="hidden sm:block text-white hover:text-[#F4376D] transition-colors font-medium font-roboto">
-              Login
-            </button>
-
             {/* Enhanced Mobile menu button */}
             <button
               onClick={toggleMenu}

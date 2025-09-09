@@ -1,42 +1,140 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Features: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeFeature, setActiveFeature] = useState(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    const section = document.getElementById("features-section");
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveFeature((prev) => (prev + 1) % 4);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="py-20 bg-gradient-to-br from-[#2d3748] via-[#1a202c] to-[#283040]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 md:mb-6 font-roboto leading-tight">
+    <section
+      id="features-section"
+      className="py-20 bg-gradient-to-br from-[#2d1b3d] via-[#1a0f26] to-[#3d2952] relative overflow-hidden"
+    >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-[#F4376D]/10 via-[#A855F7]/15 to-[#3B82F6]/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-r from-[#A855F7]/15 via-[#3B82F6]/10 to-[#F4376D]/10 rounded-full blur-3xl animate-float-delayed"></div>
+
+        {/* Floating particles */}
+        <div className="absolute top-1/4 left-1/5 w-2 h-2 bg-[#F4376D]/40 rounded-full animate-bounce-slow"></div>
+        <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-[#A855F7]/30 rounded-full animate-pulse-slow"></div>
+        <div className="absolute top-2/3 left-2/3 w-1 h-1 bg-[#3B82F6]/50 rounded-full animate-float-slow"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div
+          className={`text-center mb-12 md:mb-16 transform transition-all duration-1000 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+        >
+          {/* Enhanced Badge */}
+          <div className="inline-block mb-6 animate-slideInDown">
+            <div className="relative bg-gradient-to-r from-[#F4376D]/10 via-[#A855F7]/10 to-[#3B82F6]/10 px-8 py-4 rounded-full border border-[#F4376D]/30 backdrop-blur-sm">
+              <span className="text-transparent bg-gradient-to-r from-[#F4376D] to-[#A855F7] bg-clip-text text-sm font-bold tracking-wider uppercase font-roboto">
+                Premium Features
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D]/5 via-[#A855F7]/5 to-[#3B82F6]/5 rounded-full blur animate-pulse"></div>
+            </div>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 md:mb-6 font-roboto leading-tight animate-fadeInUp">
             Why Choose{" "}
-            <span className="text-transparent bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] bg-clip-text">
+            <span className="relative text-transparent bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] bg-clip-text animate-gradient-x">
               PinayMate
+              <div className="absolute -top-2 -right-4 animate-bounce">
+                <div className="w-6 h-6 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center shadow-lg">
+                  <svg
+                    className="w-3 h-3 text-white animate-pulse"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                  </svg>
+                </div>
+              </div>
             </span>
             ?
           </h2>
-          <p className="text-lg md:text-xl text-[#8D99B2] leading-relaxed max-w-3xl mx-auto font-roboto px-4">
+
+          <p className="text-lg md:text-xl text-[#C8B5E6] leading-relaxed max-w-3xl mx-auto font-roboto px-4 animate-fadeInUp delay-300">
             Experience the most advanced Filipino dating platform with
-            cutting-edge features designed to help you find genuine connections
-            and lasting relationships.
+            <span className="text-transparent bg-gradient-to-r from-[#F4376D] to-[#A855F7] bg-clip-text font-bold">
+              {" "}
+              cutting-edge features
+            </span>{" "}
+            designed to help you find genuine connections and lasting
+            relationships.
           </p>
+
+          {/* Feature Navigation Dots */}
+          <div className="flex justify-center space-x-3 mt-8 animate-fadeInUp delay-500">
+            {[0, 1, 2, 3].map((index) => (
+              <button
+                key={index}
+                onClick={() => setActiveFeature(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  activeFeature === index
+                    ? "bg-gradient-to-r from-[#F4376D] to-[#A855F7] scale-125"
+                    : "bg-gray-600 hover:bg-gray-500"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="space-y-16 md:space-y-20">
           {/* Feature 1: Advanced Matching Algorithm - Image Left, Text Right */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-            <div className="flex-shrink-0 order-2 lg:order-1">
-              <div className="w-full max-w-xs sm:max-w-sm mx-auto bg-gradient-to-br from-[#8D99B2]/20 to-[#283040]/40 rounded-2xl md:rounded-3xl p-3 md:p-4 backdrop-blur-sm border border-[#F4376D]/20">
-                <div className="w-full h-96 bg-white rounded-2xl overflow-hidden relative">
+          <div
+            className={`grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center transform transition-all duration-1000 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-20 opacity-0"
+            }`}
+          >
+            <div className="flex-shrink-0 order-2 lg:order-1 animate-slideInLeft delay-200">
+              <div className="w-full max-w-xs sm:max-w-sm mx-auto bg-gradient-to-br from-[#F4376D]/5 via-[#A855F7]/10 to-[#3B82F6]/5 rounded-3xl p-4 backdrop-blur-sm border border-[#F4376D]/30 shadow-2xl transform hover:scale-105 hover:rotate-1 transition-all duration-500 group">
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D]/20 via-[#A855F7]/20 to-[#3B82F6]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative w-full h-96 bg-white rounded-2xl overflow-hidden shadow-inner">
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-6">
                       <h3 className="text-lg font-bold text-[#283040] font-roboto">
-                        Advanced Matching
+                        Smart Matching
                       </h3>
-                      <div className="w-6 h-6 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full"></div>
+                      <div className="w-8 h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center animate-pulse shadow-lg">
+                        <span className="text-white font-bold text-xs">AI</span>
+                      </div>
                     </div>
 
                     <div className="space-y-4">
-                      <div className="bg-gradient-to-r from-[#F4376D]/10 to-[#A855F7]/10 p-4 rounded-xl border border-[#F4376D]/20">
+                      <div className="bg-gradient-to-r from-[#F4376D]/10 to-[#A855F7]/10 p-4 rounded-xl border border-[#F4376D]/20 transform hover:scale-105 transition-all duration-300 hover:shadow-lg animate-slideInUp delay-100">
                         <div className="flex items-center space-x-3 mb-2">
-                          <div className="w-8 h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center animate-heartbeat shadow-lg">
                             <span className="text-white text-xs font-bold">
                               97%
                             </span>
@@ -50,10 +148,10 @@ const Features: React.FC = () => {
                         </p>
                       </div>
 
-                      <div className="bg-gradient-to-r from-[#A855F7]/10 to-[#3B82F6]/10 p-4 rounded-xl border border-[#A855F7]/20">
+                      <div className="bg-gradient-to-r from-[#A855F7]/10 to-[#3B82F6]/10 p-4 rounded-xl border border-[#A855F7]/20 transform hover:scale-105 transition-all duration-300 hover:shadow-lg animate-slideInUp delay-200">
                         <div className="flex items-center space-x-3 mb-2">
-                          <div className="w-8 h-8 bg-gradient-to-r from-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center">
-                            <span className="text-white text-xs font-bold">
+                          <div className="w-8 h-8 bg-gradient-to-r from-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center animate-spin-slow shadow-lg">
+                            <span className="text-white text-xs font-bold animate-pulse">
                               AI
                             </span>
                           </div>
@@ -65,10 +163,34 @@ const Features: React.FC = () => {
                           Learning your preferences daily
                         </p>
                       </div>
+
+                      <div className="bg-gradient-to-r from-[#3B82F6]/10 to-[#F4376D]/10 p-4 rounded-xl border border-[#3B82F6]/20 transform hover:scale-105 transition-all duration-300 hover:shadow-lg animate-slideInUp delay-300">
+                        <div className="flex items-center space-x-3 mb-2">
+                          <div className="w-8 h-8 bg-gradient-to-r from-[#3B82F6] to-[#F4376D] rounded-full flex items-center justify-center animate-bounce shadow-lg">
+                            <svg
+                              className="w-4 h-4 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                          <span className="font-semibold text-[#283040] text-sm">
+                            Real-Time Updates
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#8D99B2]">
+                          Instant match notifications
+                        </p>
+                      </div>
                     </div>
 
                     <div className="mt-6">
-                      <button className="w-full bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] text-white py-2 rounded-full text-sm font-bold font-roboto">
+                      <button className="w-full bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] text-white py-3 rounded-full text-sm font-bold font-roboto shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-subtle">
                         Find Your Match
                       </button>
                     </div>
@@ -77,23 +199,65 @@ const Features: React.FC = () => {
               </div>
             </div>
 
-            <div className="space-y-4 md:space-y-6 order-1 lg:order-2 text-center lg:text-left">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto">
-                Advanced Matching
+            <div className="space-y-4 md:space-y-6 order-1 lg:order-2 text-center lg:text-left animate-slideInRight delay-400">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto animate-fadeInUp">
+                <span className="block transform hover:scale-105 transition-transform duration-300">
+                  Advanced Matching
+                </span>
                 <br />
-                <span className="text-transparent bg-gradient-to-r from-[#F4376D] to-[#A855F7] bg-clip-text">
+                <span className="relative text-transparent bg-gradient-to-r from-[#F4376D] to-[#A855F7] bg-clip-text animate-gradient-x">
                   Algorithm
+                  <div className="absolute -top-1 -right-6 animate-pulse">
+                    <div className="w-4 h-4 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full animate-ping"></div>
+                  </div>
                 </span>
               </h3>
-              <p className="text-base md:text-lg text-[#8D99B2] leading-relaxed font-roboto px-4 lg:px-0">
-                Our advanced matching algorithm utilizes a combination of user
-                preferences, interests, and compatibility factors to suggest
-                highly compatible matches. Say goodbye to endless scrolling and
-                let our algorithm do the work of finding your ideal connections.
+              <p className="text-base md:text-lg text-[#C8B5E6] leading-relaxed font-roboto px-4 lg:px-0 animate-fadeInUp delay-200">
+                Our{" "}
+                <span className="text-transparent bg-gradient-to-r from-[#F4376D] to-[#A855F7] bg-clip-text font-bold">
+                  AI-powered algorithm
+                </span>{" "}
+                analyzes compatibility across 50+ factors including personality,
+                lifestyle, and relationship goals. Experience precision matching
+                that brings you closer to your perfect Filipino soulmate.
               </p>
-              <div className="flex justify-center lg:justify-start">
-                <button className="bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-bold hover:opacity-90 transition-all duration-300 shadow-lg transform hover:scale-105 font-roboto text-sm md:text-base">
-                  🔍 Find Your Match
+
+              <div className="space-y-4 animate-fadeInUp delay-300">
+                <div className="flex items-center justify-center lg:justify-start space-x-4">
+                  <div className="flex items-center space-x-2 bg-gradient-to-r from-[#F4376D]/10 to-[#A855F7]/10 px-4 py-2 rounded-full border border-[#F4376D]/20 backdrop-blur-sm">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-[#C8B5E6] text-sm font-roboto">
+                      97% Match Accuracy
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-2 bg-gradient-to-r from-[#A855F7]/10 to-[#3B82F6]/10 px-4 py-2 rounded-full border border-[#A855F7]/20 backdrop-blur-sm">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce"></div>
+                    <span className="text-[#C8B5E6] text-sm font-roboto">
+                      Real-Time Learning
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex justify-center lg:justify-start animate-fadeInUp delay-500">
+                <button className="group relative bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] text-white px-8 py-4 rounded-2xl font-black hover:opacity-90 transition-all duration-300 shadow-2xl transform hover:scale-105 font-roboto text-lg overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] via-[#A855F7] to-[#F4376D] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="relative z-10 flex items-center space-x-2">
+                    <span>Start Smart Matching</span>
+                    <div className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300">
+                      <svg
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        className="animate-pulse"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </span>
                 </button>
               </div>
             </div>

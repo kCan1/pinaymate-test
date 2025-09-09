@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const Hero: React.FC = () => {
-  const [currentCount, setCurrentCount] = useState(1000);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentCount((prev) => prev + Math.floor(Math.random() * 3));
-    }, 3000);
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -37,14 +32,6 @@ const Hero: React.FC = () => {
             }`}
           >
             <div className="space-y-8">
-              {/* Badge */}
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#F4376D]/20 to-[#A855F7]/20 border border-[#F4376D]/30 rounded-full px-6 py-3 backdrop-blur-sm animate-bounce">
-                <div className="w-3 h-3 bg-[#F4376D] rounded-full animate-pulse"></div>
-                <span className="text-[#F4376D] font-bold text-sm font-roboto">
-                  🔥 {currentCount.toLocaleString()}+ Active Matches Today
-                </span>
-              </div>
-
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] font-roboto tracking-tight">
                 <span className="block animate-fadeInUp">Discover Your</span>
                 <span className="block text-transparent bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] bg-clip-text animate-fadeInUp delay-150 bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-1000">

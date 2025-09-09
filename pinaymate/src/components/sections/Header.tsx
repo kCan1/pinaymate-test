@@ -37,7 +37,7 @@ const Header: React.FC = () => {
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D]/5 via-[#A855F7]/5 to-[#3B82F6]/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20 relative">
         <div
           className={`flex justify-between items-center transition-all duration-300 ${
             isScrolled ? "h-14" : "h-16"
@@ -63,30 +63,29 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Enhanced Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-2">
-            {navItems.map((item, index) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="group relative px-4 py-2 rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-[#F4376D]/10 hover:to-[#A855F7]/10 hover:backdrop-blur-sm"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex items-center">
-                  <span className="text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#F4376D] group-hover:to-[#A855F7] group-hover:bg-clip-text font-medium font-roboto transition-all duration-300">
-                    {item.label}
-                  </span>
-                </div>
-                {/* Animated underline */}
-                <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#F4376D] to-[#A855F7] group-hover:w-full group-hover:left-0 transition-all duration-300 rounded-full"></div>
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D]/0 via-[#A855F7]/0 to-[#3B82F6]/0 group-hover:from-[#F4376D]/5 group-hover:via-[#A855F7]/5 group-hover:to-[#3B82F6]/5 rounded-xl transition-all duration-300 blur-sm"></div>
-              </a>
-            ))}
-          </div>
-
-          {/* Right side buttons */}
-          <div className="flex items-center space-x-4">
+          {/* Right side - Navigation and buttons */}
+          <div className="flex items-center space-x-6">
+            {/* Enhanced Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-2">
+              {navItems.map((item, index) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="group relative px-4 py-2 rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-[#F4376D]/10 hover:to-[#A855F7]/10 hover:backdrop-blur-sm"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="flex items-center">
+                    <span className="text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#F4376D] group-hover:to-[#A855F7] group-hover:bg-clip-text font-medium font-roboto transition-all duration-300">
+                      {item.label}
+                    </span>
+                  </div>
+                  {/* Animated underline */}
+                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#F4376D] to-[#A855F7] group-hover:w-full group-hover:left-0 transition-all duration-300 rounded-full"></div>
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D]/0 via-[#A855F7]/0 to-[#3B82F6]/0 group-hover:from-[#F4376D]/5 group-hover:via-[#A855F7]/5 group-hover:to-[#3B82F6]/5 rounded-xl transition-all duration-300 blur-sm"></div>
+                </a>
+              ))}
+            </div>
             {/* Enhanced Mobile menu button */}
             <button
               onClick={toggleMenu}

@@ -45,7 +45,7 @@ const Features: React.FC = () => {
         <div className="absolute top-2/3 left-2/3 w-1 h-1 bg-[#3B82F6]/50 rounded-full animate-float-slow"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20 relative z-10 max-w-[1600px]">
         <div
           className={`text-center mb-12 md:mb-16 transform transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -264,31 +264,53 @@ const Features: React.FC = () => {
           </div>
 
           {/* Feature 2: Rich Profile Customization - Text Left, Image Right */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-            <div className="space-y-4 md:space-y-6 order-2 lg:order-1 text-center lg:text-left">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto">
-                Rich Profile
+          <div
+            className={`grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center transform transition-all duration-1000 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-20 opacity-0"
+            }`}
+            style={{ transitionDelay: "400ms" }}
+          >
+            <div className="space-y-4 md:space-y-6 order-2 lg:order-1 text-center lg:text-left animate-slideInLeft delay-600">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto animate-fadeInUp">
+                <span className="block transform hover:scale-105 transition-transform duration-300">
+                  Rich Profile
+                </span>
                 <br />
-                <span className="text-transparent bg-gradient-to-r from-[#F4376D] to-[#3B82F6] bg-clip-text">
+                <span className="relative text-transparent bg-gradient-to-r from-[#F4376D] to-[#3B82F6] bg-clip-text animate-gradient-x">
                   Customization
+                  <div className="absolute -top-1 -right-6 animate-bounce">
+                    <div className="w-4 h-4 bg-gradient-to-r from-[#F4376D] to-[#3B82F6] rounded-full animate-ping"></div>
+                  </div>
                 </span>
               </h3>
-              <p className="text-base md:text-lg text-[#8D99B2] leading-relaxed font-roboto px-4 lg:px-0">
-                Personalize your profile with our extensive customization
-                options. Showcase your personality, interests, and lifestyle
-                through photos, videos, and detailed bio sections. Let your
-                unique self shine and attract like-minded individuals who
-                resonate with your passions.
+              <p className="text-base md:text-lg text-[#C8B5E6] leading-relaxed font-roboto px-4 lg:px-0 animate-fadeInUp delay-200">
+                Personalize your profile with our{" "}
+                <span className="text-transparent bg-gradient-to-r from-[#F4376D] to-[#3B82F6] bg-clip-text font-bold">
+                  extensive customization options
+                </span>
+                . Showcase your personality, interests, and lifestyle through
+                photos, videos, and detailed bio sections. Let your unique self
+                shine and attract like-minded individuals.
               </p>
-              <div className="flex justify-center lg:justify-start">
-                <button className="bg-gradient-to-r from-[#F4376D] via-[#3B82F6] to-[#A855F7] text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-bold hover:opacity-90 transition-all duration-300 shadow-lg transform hover:scale-105 font-roboto text-sm md:text-base">
-                  ✨ Create Your Profile
+              <div className="flex justify-center lg:justify-start animate-fadeInUp delay-400">
+                <button className="group relative bg-gradient-to-r from-[#F4376D] via-[#3B82F6] to-[#A855F7] text-white px-8 py-4 rounded-2xl font-black hover:opacity-90 transition-all duration-300 shadow-2xl transform hover:scale-105 font-roboto text-lg overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#A855F7] via-[#3B82F6] to-[#F4376D] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="relative z-10 flex items-center space-x-2">
+                    <span>Create Your Profile</span>
+                    <div className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300">
+                      <span className="animate-pulse">✨</span>
+                    </div>
+                  </span>
                 </button>
               </div>
             </div>
 
-            <div className="flex-shrink-0 order-1 lg:order-2">
-              <div className="w-full max-w-xs sm:max-w-sm mx-auto bg-gradient-to-br from-[#8D99B2]/20 to-[#283040]/40 rounded-2xl md:rounded-3xl p-3 md:p-4 backdrop-blur-sm border border-[#F4376D]/20">
+            <div className="flex-shrink-0 order-1 lg:order-2 animate-slideInRight delay-800">
+              <div className="w-full max-w-xs sm:max-w-sm mx-auto bg-gradient-to-br from-[#F4376D]/5 via-[#A855F7]/10 to-[#3B82F6]/5 rounded-3xl p-4 backdrop-blur-sm border border-[#F4376D]/30 shadow-2xl transform hover:scale-105 hover:rotate-1 transition-all duration-500 group">
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D]/20 via-[#A855F7]/20 to-[#3B82F6]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="w-full h-96 bg-white rounded-2xl overflow-hidden relative">
                   <div className="p-4">
                     <div className="text-center mb-4">
@@ -352,9 +374,18 @@ const Features: React.FC = () => {
           </div>
 
           {/* Feature 3: Real-Time Chat and Messaging - Image Left, Text Right */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-            <div className="flex-shrink-0 order-2 lg:order-1">
-              <div className="w-full max-w-xs sm:max-w-sm mx-auto bg-gradient-to-br from-[#8D99B2]/20 to-[#283040]/40 rounded-2xl md:rounded-3xl p-3 md:p-4 backdrop-blur-sm border border-[#A855F7]/20">
+          <div
+            className={`grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center transform transition-all duration-1000 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-20 opacity-0"
+            }`}
+            style={{ transitionDelay: "800ms" }}
+          >
+            <div className="flex-shrink-0 order-2 lg:order-1 animate-slideInLeft delay-1000">
+              <div className="w-full max-w-xs sm:max-w-sm mx-auto bg-gradient-to-br from-[#A855F7]/5 via-[#3B82F6]/10 to-[#F4376D]/5 rounded-3xl p-4 backdrop-blur-sm border border-[#A855F7]/30 shadow-2xl transform hover:scale-105 hover:rotate-1 transition-all duration-500 group">
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#A855F7]/20 via-[#3B82F6]/20 to-[#F4376D]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="w-full h-96 bg-[#283040] rounded-2xl overflow-hidden relative">
                   <div className="p-4">
                     <div className="flex items-center space-x-3 mb-4">
@@ -416,54 +447,80 @@ const Features: React.FC = () => {
               </div>
             </div>
 
-            <div className="space-y-4 md:space-y-6 order-1 lg:order-2 text-center lg:text-left">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto">
+            <div className="space-y-4 md:space-y-6 order-1 lg:order-2 text-center lg:text-left animate-slideInRight delay-1200">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto animate-fadeInUp">
                 Real-Time Chat and
                 <br />
                 <span className="text-transparent bg-gradient-to-r from-[#A855F7] to-[#F4376D] bg-clip-text">
                   Messaging
                 </span>
               </h3>
-              <p className="text-base md:text-lg text-[#8D99B2] leading-relaxed font-roboto px-4 lg:px-0">
-                Stay connected with your matches through our real-time chat and
-                messaging system. Enjoy seamless conversations, share photos and
-                videos, and get to know each other at your best pace. Our
-                intuitive interface makes it easy to strike up meaningful
-                connections and build connections that last.
+              <p className="text-base md:text-lg text-[#C8B5E6] leading-relaxed font-roboto px-4 lg:px-0 animate-fadeInUp delay-200">
+                Stay connected with your matches through our{" "}
+                <span className="text-transparent bg-gradient-to-r from-[#A855F7] to-[#F4376D] bg-clip-text font-bold">
+                  real-time chat system
+                </span>
+                . Enjoy seamless conversations, share photos and videos, and get
+                to know each other at your perfect pace. Our intuitive interface
+                makes meaningful connections effortless.
               </p>
-              <div className="flex justify-center lg:justify-start">
-                <button className="bg-gradient-to-r from-[#A855F7] via-[#F4376D] to-[#3B82F6] text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-bold hover:opacity-90 transition-all duration-300 shadow-lg transform hover:scale-105 font-roboto text-sm md:text-base">
-                  💬 Start Chatting
+              <div className="flex justify-center lg:justify-start animate-fadeInUp delay-400">
+                <button className="group relative bg-gradient-to-r from-[#A855F7] via-[#F4376D] to-[#3B82F6] text-white px-8 py-4 rounded-2xl font-black hover:opacity-90 transition-all duration-300 shadow-2xl transform hover:scale-105 font-roboto text-lg overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] via-[#F4376D] to-[#A855F7] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="relative z-10 flex items-center space-x-2">
+                    <span>Start Chatting</span>
+                    <div className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300">
+                      <span className="animate-pulse">💬</span>
+                    </div>
+                  </span>
                 </button>
               </div>
             </div>
           </div>
 
           {/* Feature 4: SheerID Verified Users - Text Left, Image Right */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-            <div className="space-y-4 md:space-y-6 order-2 lg:order-1 text-center lg:text-left">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto">
+          <div
+            className={`grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center transform transition-all duration-1000 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-20 opacity-0"
+            }`}
+            style={{ transitionDelay: "1200ms" }}
+          >
+            <div className="space-y-4 md:space-y-6 order-2 lg:order-1 text-center lg:text-left animate-slideInLeft delay-1400">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto animate-fadeInUp">
                 SheerID
                 <br />
                 <span className="text-transparent bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text">
                   Verified Users
                 </span>
               </h3>
-              <p className="text-base md:text-lg text-[#8D99B2] leading-relaxed font-roboto px-4 lg:px-0">
-                Every member undergoes comprehensive SheerID verification
+              <p className="text-base md:text-lg text-[#C8B5E6] leading-relaxed font-roboto px-4 lg:px-0 animate-fadeInUp delay-200">
+                Every member undergoes comprehensive{" "}
+                <span className="text-transparent bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text font-bold">
+                  SheerID verification
+                </span>{" "}
                 including identity, income, and background checks. Connect with
                 confidence knowing all profiles are 100% authentic with no fake
                 accounts or catfish profiles.
               </p>
-              <div className="flex justify-center lg:justify-start">
-                <button className="bg-gradient-to-r from-[#3B82F6] via-[#A855F7] to-[#F4376D] text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-bold hover:opacity-90 transition-all duration-300 shadow-lg transform hover:scale-105 font-roboto text-sm md:text-base">
-                  🛡️ Get Verified Now
+              <div className="flex justify-center lg:justify-start animate-fadeInUp delay-400">
+                <button className="group relative bg-gradient-to-r from-[#3B82F6] via-[#A855F7] to-[#F4376D] text-white px-8 py-4 rounded-2xl font-black hover:opacity-90 transition-all duration-300 shadow-2xl transform hover:scale-105 font-roboto text-lg overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="relative z-10 flex items-center space-x-2">
+                    <span>Get Verified Now</span>
+                    <div className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300">
+                      <span className="animate-pulse">🛡️</span>
+                    </div>
+                  </span>
                 </button>
               </div>
             </div>
 
-            <div className="flex-shrink-0 order-1 lg:order-2">
-              <div className="w-full max-w-xs sm:max-w-sm mx-auto bg-gradient-to-br from-[#8D99B2]/20 to-[#283040]/40 rounded-2xl md:rounded-3xl p-3 md:p-4 backdrop-blur-sm border border-[#3B82F6]/20">
+            <div className="flex-shrink-0 order-1 lg:order-2 animate-slideInRight delay-1600">
+              <div className="w-full max-w-xs sm:max-w-sm mx-auto bg-gradient-to-br from-[#3B82F6]/5 via-[#A855F7]/10 to-[#F4376D]/5 rounded-3xl p-4 backdrop-blur-sm border border-[#3B82F6]/30 shadow-2xl transform hover:scale-105 hover:rotate-1 transition-all duration-500 group">
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6]/20 via-[#A855F7]/20 to-[#F4376D]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="w-full h-96 bg-white rounded-2xl overflow-hidden relative">
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-6">

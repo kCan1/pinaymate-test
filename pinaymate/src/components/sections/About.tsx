@@ -68,7 +68,7 @@ const About: React.FC = () => {
               <span className="block transform hover:scale-105 transition-transform duration-300">
                 Connecting Hearts,
               </span>
-              <br />
+
               <span className="relative block italic text-transparent bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] bg-clip-text animate-fadeInUp delay-300 transform hover:scale-105 transition-all duration-500">
                 Building Forever
                 <div className="absolute -top-2 -right-8 animate-heartbeat">

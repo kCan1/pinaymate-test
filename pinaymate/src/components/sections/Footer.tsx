@@ -113,8 +113,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-[#8D99B2]/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-[#8D99B2] text-sm text-center md:text-left font-roboto">
-              &copy; 2024 PinayMate. All rights reserved. Made with 💕 for
-              genuine connections.
+              &copy; 2025 PinayMate. All rights reserved.
             </div>
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">

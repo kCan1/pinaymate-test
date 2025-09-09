@@ -21,18 +21,18 @@ const Hero: React.FC = () => {
         <div className="absolute top-2/3 left-2/3 w-3 h-3 bg-[#3B82F6] rounded-full animate-bounce delay-700"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20 relative z-10 max-w-[1600px]">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-center">
           {/* Left Content */}
           <div
-            className={`space-y-8 transform transition-all duration-1000 ${
+            className={`space-y-6 md:space-y-8 transform transition-all duration-1000 ${
               isVisible
                 ? "translate-x-0 opacity-100"
                 : "-translate-x-20 opacity-0"
             }`}
           >
-            <div className="space-y-8">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] font-roboto tracking-tight">
+            <div className="space-y-6 md:space-y-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] font-roboto tracking-tight">
                 <span className="block animate-fadeInUp">Discover Your</span>
                 <span className="block text-transparent bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] bg-clip-text animate-fadeInUp delay-150 bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-1000">
                   Perfect Filipina
@@ -55,13 +55,15 @@ const Hero: React.FC = () => {
                 </p>
 
                 {/* Success Stats */}
-                <div className="flex flex-wrap gap-6 py-4">
-                  <div className="flex items-center space-x-3 bg-gradient-to-r from-[#F4376D]/10 to-[#A855F7]/10 rounded-2xl px-4 py-3 border border-[#F4376D]/20 backdrop-blur-sm">
-                    <div className="w-8 h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center animate-pulse">
-                      <span className="text-white font-bold text-sm">💕</span>
+                <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 py-4 justify-center sm:justify-start">
+                  <div className="flex items-center space-x-2 sm:space-x-3 bg-gradient-to-r from-[#F4376D]/10 to-[#A855F7]/10 rounded-xl sm:rounded-2xl px-3 sm:px-4 py-2 sm:py-3 border border-[#F4376D]/20 backdrop-blur-sm">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center animate-pulse">
+                      <span className="text-white font-bold text-xs sm:text-sm">
+                        💕
+                      </span>
                     </div>
                     <div>
-                      <div className="text-white font-black text-lg font-roboto">
+                      <div className="text-white font-black text-sm sm:text-lg font-roboto">
                         94%
                       </div>
                       <div className="text-[#C8B5E6] text-xs font-roboto">
@@ -69,25 +71,29 @@ const Hero: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3 bg-gradient-to-r from-[#A855F7]/10 to-[#3B82F6]/10 rounded-2xl px-4 py-3 border border-[#A855F7]/20 backdrop-blur-sm">
-                    <div className="w-8 h-8 bg-gradient-to-r from-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center animate-pulse delay-75">
-                      <span className="text-white font-bold text-sm">✨</span>
+                  <div className="flex items-center space-x-2 sm:space-x-3 bg-gradient-to-r from-[#A855F7]/10 to-[#3B82F6]/10 rounded-xl sm:rounded-2xl px-3 sm:px-4 py-2 sm:py-3 border border-[#A855F7]/20 backdrop-blur-sm">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center animate-pulse delay-75">
+                      <span className="text-white font-bold text-xs sm:text-sm">
+                        ✨
+                      </span>
                     </div>
                     <div>
-                      <div className="text-white font-black text-lg font-roboto">
+                      <div className="text-white font-black text-sm sm:text-lg font-roboto">
                         500+
                       </div>
                       <div className="text-[#C8B5E6] text-xs font-roboto">
-                        Success Stories
+                        Stories
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3 bg-gradient-to-r from-[#3B82F6]/10 to-[#F4376D]/10 rounded-2xl px-4 py-3 border border-[#3B82F6]/20 backdrop-blur-sm">
-                    <div className="w-8 h-8 bg-gradient-to-r from-[#3B82F6] to-[#F4376D] rounded-full flex items-center justify-center animate-pulse delay-150">
-                      <span className="text-white font-bold text-sm">🛡️</span>
+                  <div className="flex items-center space-x-2 sm:space-x-3 bg-gradient-to-r from-[#3B82F6]/10 to-[#F4376D]/10 rounded-xl sm:rounded-2xl px-3 sm:px-4 py-2 sm:py-3 border border-[#3B82F6]/20 backdrop-blur-sm">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-[#3B82F6] to-[#F4376D] rounded-full flex items-center justify-center animate-pulse delay-150">
+                      <span className="text-white font-bold text-xs sm:text-sm">
+                        🛡️
+                      </span>
                     </div>
                     <div>
-                      <div className="text-white font-black text-lg font-roboto">
+                      <div className="text-white font-black text-sm sm:text-lg font-roboto">
                         100%
                       </div>
                       <div className="text-[#C8B5E6] text-xs font-roboto">
@@ -102,10 +108,10 @@ const Hero: React.FC = () => {
             <div className="space-y-6 animate-fadeInUp delay-700">
               {/* Main CTA Button */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group relative bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] text-white px-10 py-5 rounded-2xl text-xl font-black hover:opacity-90 transition-all duration-300 shadow-2xl transform hover:scale-105 font-roboto overflow-hidden">
+                <button className="group relative bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] text-white px-10 py-5 rounded-2xl text-xl font-black hover:opacity-90 transition-all duration-300 shadow-2xl transform hover:scale-105 font-roboto overflow-hidden animate-zoom-pulse">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] via-[#A855F7] to-[#F4376D] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="relative z-10 flex items-center justify-center space-x-2">
-                    <span>🌺 Find Your Filipina Love</span>
+                    <span>Find Your Filipina Love</span>
                     <svg
                       className="w-6 h-6 transform group-hover:translate-x-1 transition-transform"
                       fill="currentColor"
@@ -122,7 +128,7 @@ const Hero: React.FC = () => {
 
                 <button className="group bg-transparent border-2 border-[#F4376D] text-[#F4376D] px-8 py-5 rounded-2xl text-xl font-bold hover:bg-[#F4376D] hover:text-white transition-all duration-300 font-roboto">
                   <span className="flex items-center justify-center space-x-2">
-                    <span>📹 Watch Success Stories</span>
+                    <span>Watch Success Stories</span>
                   </span>
                 </button>
               </div>
@@ -133,36 +139,6 @@ const Hero: React.FC = () => {
                   💯 Trusted by thousands of couples worldwide • 🛡️ SheerID
                   Verified Profiles
                 </p>
-
-                {/* Testimonial Ticker */}
-                <div className="bg-gradient-to-r from-[#F4376D]/10 via-[#A855F7]/10 to-[#3B82F6]/10 rounded-2xl p-4 border border-[#F4376D]/20 backdrop-blur-sm">
-                  <div className="flex items-center space-x-4 overflow-hidden">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-r from-[#F4376D] to-[#A855F7] rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold">MJ</span>
-                      </div>
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="text-white font-bold font-roboto">
-                        "Found my soulmate in 2 weeks!"
-                      </div>
-                      <div className="text-[#C8B5E6] text-sm font-roboto">
-                        Michael & Maria - Now Married 💕
-                      </div>
-                    </div>
-                    <div className="flex space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <span
-                          key={i}
-                          className="text-yellow-400 text-lg animate-pulse"
-                          style={{ animationDelay: `${i * 100}ms` }}
-                        >
-                          ⭐
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -175,16 +151,16 @@ const Hero: React.FC = () => {
                 : "translate-x-20 opacity-0"
             }`}
           >
-            <div className="relative">
+            <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
               {/* Magical Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#F4376D]/30 via-[#A855F7]/20 to-[#3B82F6]/30 blur-3xl scale-150 animate-pulse"></div>
 
               {/* Main Phone - Dating Profile */}
-              <div className="relative z-20 transform rotate-6 hover:rotate-12 transition-transform duration-700">
-                <div className="w-80 h-[650px] bg-gradient-to-br from-[#2a2a3e] to-[#1a1a2e] rounded-[3.5rem] p-3 shadow-2xl border-2 border-[#F4376D]/30 hover:border-[#F4376D]/50 transition-all duration-300">
+              <div className="relative z-20 transform rotate-3 sm:rotate-6 hover:rotate-12 transition-transform duration-700">
+                <div className="w-72 sm:w-80 md:w-84 lg:w-80 xl:w-84 h-[550px] sm:h-[650px] md:h-[680px] lg:h-[650px] xl:h-[680px] bg-gradient-to-br from-[#2a2a3e] to-[#1a1a2e] rounded-[2.5rem] sm:rounded-[3.5rem] p-2 sm:p-3 shadow-2xl border-2 border-[#F4376D]/30 hover:border-[#F4376D]/50 transition-all duration-300 mx-auto">
                   <div className="w-full h-full bg-gradient-to-br from-[#1a0f26] to-[#0f0a1a] rounded-[3rem] overflow-hidden relative">
                     {/* Status Bar */}
-                    <div className="flex justify-between items-center px-8 pt-6 pb-4">
+                    <div className="flex justify-between items-center px-6 sm:px-8 pt-4 sm:pt-6 pb-3 sm:pb-4">
                       <div className="text-white text-sm font-medium font-roboto">
                         9:41
                       </div>
@@ -198,19 +174,19 @@ const Hero: React.FC = () => {
                     </div>
 
                     {/* App Header */}
-                    <div className="px-8 py-2">
-                      <div className="flex items-center justify-between mb-8">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center shadow-lg animate-pulse">
-                            <span className="text-white font-bold text-lg">
+                    <div className="px-6 sm:px-8 py-2">
+                      <div className="flex items-center justify-between mb-6 sm:mb-8">
+                        <div className="flex items-center space-x-2 sm:space-x-3">
+                          <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                            <span className="text-white font-bold text-base sm:text-lg">
                               ∞
                             </span>
                           </div>
-                          <span className="text-white text-2xl font-black font-roboto">
+                          <span className="text-white text-xl sm:text-2xl font-black font-roboto">
                             PinayMate
                           </span>
                         </div>
-                        <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
+                        <div className="w-6 sm:w-8 h-6 sm:h-8 bg-white/10 rounded-full flex items-center justify-center">
                           <div className="w-2 h-2 bg-[#F4376D] rounded-full animate-pulse"></div>
                         </div>
                       </div>
@@ -299,8 +275,8 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Background Phone - Chat Interface */}
-              <div className="absolute top-20 -right-12 z-10 transform -rotate-6 hover:-rotate-3 transition-transform duration-700">
-                <div className="w-72 h-[580px] bg-gradient-to-br from-[#A855F7]/20 to-[#3B82F6]/20 rounded-[3rem] backdrop-blur-sm border border-[#A855F7]/30 p-3">
+              <div className="absolute top-12 sm:top-20 -right-8 sm:-right-12 z-10 transform -rotate-3 sm:-rotate-6 hover:-rotate-1 sm:hover:-rotate-3 transition-transform duration-700 hidden sm:block">
+                <div className="w-64 sm:w-72 h-[520px] sm:h-[580px] bg-gradient-to-br from-[#A855F7]/20 to-[#3B82F6]/20 rounded-[2.5rem] sm:rounded-[3rem] backdrop-blur-sm border border-[#A855F7]/30 p-2 sm:p-3">
                   <div className="w-full h-full bg-gradient-to-br from-[#2a1a3e] to-[#1a0f26] rounded-[2.5rem] overflow-hidden relative">
                     <div className="p-6">
                       {/* Chat Header */}

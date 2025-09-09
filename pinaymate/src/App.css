@@ -397,3 +397,18 @@
 .animate-float-heart {
   animation: float-heart 6s ease-in-out infinite;
 }
+
+/* Zoom pulse animation for CTA button */
+@keyframes zoom-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-zoom-pulse {
+  animation: zoom-pulse 2s ease-in-out infinite;
+}

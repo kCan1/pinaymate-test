@@ -152,16 +152,7 @@ const Header: React.FC = () => {
                 </a>
               ))}
 
-              <div className="border-t border-[#F4376D]/20 pt-4 mt-4">
-                <a
-                  href="#login"
-                  className="group flex items-center justify-center w-full bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg animate-fadeInUp"
-                  style={{ animationDelay: "600ms" }}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span className="font-roboto">Login to PinayMate</span>
-                </a>
-              </div>
+              <div className="border-t border-[#F4376D]/20 pt-4 mt-4"></div>
             </div>
           </div>
         )}

@@ -2,13 +2,46 @@ import React, { useState, useEffect } from "react";
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
+
+    // Add scroll animation observer
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsScrolled(entry.isIntersecting);
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "-10% 0px -10% 0px",
+      }
+    );
+
+    const heroSection = document.getElementById("home");
+    if (heroSection) {
+      observer.observe(heroSection);
+    }
+
+    // Add smooth scrolling behavior
+    const handleSmoothScroll = () => {
+      document.documentElement.style.scrollBehavior = "smooth";
+    };
+
+    // Listen for hash changes (navigation clicks)
+    window.addEventListener("hashchange", handleSmoothScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("hashchange", handleSmoothScroll);
+    };
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-gradient-to-br from-[#2d1b3d] via-[#1a0f26] to-[#3d2952]">
+    <section
+      id="home"
+      className="relative min-h-screen pb-6 flex items-center pt-16 overflow-hidden bg-gradient-to-br from-[#2d1b3d] via-[#1a0f26] to-[#3d2952]"
+    >
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-[#F4376D]/20 via-[#A855F7]/10 to-[#3B82F6]/20 rounded-full blur-3xl animate-pulse"></div>
@@ -25,10 +58,10 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-center">
           {/* Left Content */}
           <div
-            className={`space-y-6 md:space-y-8 transform transition-all duration-1000 ${
-              isVisible
-                ? "translate-x-0 opacity-100"
-                : "-translate-x-20 opacity-0"
+            className={`space-y-6 md:space-y-8 transform transition-all duration-1200 ${
+              isVisible && isScrolled
+                ? "translate-x-0 opacity-100 scale-100"
+                : "-translate-x-20 opacity-0 scale-95"
             }`}
           >
             <div className="space-y-6 md:space-y-8">
@@ -145,10 +178,10 @@ const Hero: React.FC = () => {
 
           {/* Right Content - Enhanced Phone Mockups */}
           <div
-            className={`relative flex justify-center lg:justify-end transform transition-all duration-1500 ${
-              isVisible
-                ? "translate-x-0 opacity-100"
-                : "translate-x-20 opacity-0"
+            className={`relative flex justify-center lg:justify-end transform transition-all duration-1800 ${
+              isVisible && isScrolled
+                ? "translate-x-0 opacity-100 scale-100"
+                : "translate-x-20 opacity-0 scale-95"
             }`}
           >
             <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
@@ -275,7 +308,7 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Background Phone - Chat Interface */}
-              <div className="absolute top-12 sm:top-20 -right-8 sm:-right-12 z-10 transform -rotate-3 sm:-rotate-6 hover:-rotate-1 sm:hover:-rotate-3 transition-transform duration-700 hidden sm:block">
+              <div className=" absolute top-12 sm:top-20 -right-8 sm:-right-12 z-10 transform -rotate-3 sm:-rotate-6 hover:-rotate-1 sm:hover:-rotate-3 transition-transform duration-700 hidden sm:block">
                 <div className="w-64 sm:w-72 h-[520px] sm:h-[580px] bg-gradient-to-br from-[#A855F7]/20 to-[#3B82F6]/20 rounded-[2.5rem] sm:rounded-[3rem] backdrop-blur-sm border border-[#A855F7]/30 p-2 sm:p-3">
                   <div className="w-full h-full bg-gradient-to-br from-[#2a1a3e] to-[#1a0f26] rounded-[2.5rem] overflow-hidden relative">
                     <div className="p-6">

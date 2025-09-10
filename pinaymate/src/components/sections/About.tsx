@@ -31,7 +31,7 @@ const About: React.FC = () => {
 
   return (
     <section
-      id="about-section"
+      id="about"
       className="py-20 bg-gradient-to-br from-[#f8fafc] via-[#ffffff] to-[#f1f5f9] relative overflow-hidden"
     >
       {/* Animated Background Elements */}

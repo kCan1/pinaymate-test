@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Features: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [activeFeature, setActiveFeature] = useState(0);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Features: React.FC = () => {
       { threshold: 0.2 }
     );
 
-    const section = document.getElementById("features-section");
+    const section = document.getElementById("features");
     if (section) {
       observer.observe(section);
     }
@@ -31,7 +31,7 @@ const Features: React.FC = () => {
 
   return (
     <section
-      id="features-section"
+      id="features"
       className="py-20 bg-gradient-to-br from-[#2d1b3d] via-[#1a0f26] to-[#3d2952] relative overflow-hidden"
     >
       {/* Animated Background Elements */}
@@ -114,6 +114,7 @@ const Features: React.FC = () => {
                 ? "translate-y-0 opacity-100"
                 : "translate-y-20 opacity-0"
             }`}
+            style={{ transitionDelay: isVisible ? "0ms" : "0ms" }}
           >
             <div className="flex-shrink-0 order-2 lg:order-1 animate-slideInLeft delay-200">
               <div className="w-full max-w-xs sm:max-w-sm mx-auto bg-gradient-to-br from-[#F4376D]/5 via-[#A855F7]/10 to-[#3B82F6]/5 rounded-3xl p-4 backdrop-blur-sm border border-[#F4376D]/30 shadow-2xl transform hover:scale-105 hover:rotate-1 transition-all duration-500 group">
@@ -241,7 +242,7 @@ const Features: React.FC = () => {
 
               <div className="flex justify-center lg:justify-start animate-fadeInUp delay-500">
                 <button className="group relative bg-gradient-to-r from-[#F4376D] via-[#A855F7] to-[#3B82F6] text-white px-8 py-4 rounded-2xl font-black hover:opacity-90 transition-all duration-300 shadow-2xl transform hover:scale-105 font-roboto text-lg overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] via-[#A855F7] to-[#F4376D] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] via-[#F4376D] to-[#A855F7] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Start Smart Matching</span>
                     <div className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300">
@@ -270,7 +271,7 @@ const Features: React.FC = () => {
                 ? "translate-y-0 opacity-100"
                 : "translate-y-20 opacity-0"
             }`}
-            style={{ transitionDelay: "400ms" }}
+            style={{ transitionDelay: isVisible ? "400ms" : "0ms" }}
           >
             <div className="space-y-4 md:space-y-6 order-2 lg:order-1 text-center lg:text-left animate-slideInLeft delay-600">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto animate-fadeInUp">
@@ -380,7 +381,7 @@ const Features: React.FC = () => {
                 ? "translate-y-0 opacity-100"
                 : "translate-y-20 opacity-0"
             }`}
-            style={{ transitionDelay: "800ms" }}
+            style={{ transitionDelay: isVisible ? "800ms" : "0ms" }}
           >
             <div className="flex-shrink-0 order-2 lg:order-1 animate-slideInLeft delay-1000">
               <div className="w-full max-w-xs sm:max-w-sm mx-auto bg-gradient-to-br from-[#A855F7]/5 via-[#3B82F6]/10 to-[#F4376D]/5 rounded-3xl p-4 backdrop-blur-sm border border-[#A855F7]/30 shadow-2xl transform hover:scale-105 hover:rotate-1 transition-all duration-500 group">
@@ -485,7 +486,7 @@ const Features: React.FC = () => {
                 ? "translate-y-0 opacity-100"
                 : "translate-y-20 opacity-0"
             }`}
-            style={{ transitionDelay: "1200ms" }}
+            style={{ transitionDelay: isVisible ? "1200ms" : "0ms" }}
           >
             <div className="space-y-4 md:space-y-6 order-2 lg:order-1 text-center lg:text-left animate-slideInLeft delay-1400">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white font-roboto animate-fadeInUp">
